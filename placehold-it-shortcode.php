@@ -60,11 +60,11 @@ function get_text(&$attrs) {
   return '&text=' . $text;
 }
 
-function placeholder_it_shortcode($attrs) {
+function placehold_it_shortcode($attrs) {
   $segments = build_segments($attrs);
   return '<img src="http://placehold.it/' . implode('/', $segments) . '">';
 }
 
-add_shortcode('placehold-it', 'placeholder_it_shortcode');
+add_shortcode('placehold-it', 'placehold_it_shortcode');
 
 ?>
