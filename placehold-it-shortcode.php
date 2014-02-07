@@ -3,7 +3,7 @@
 Plugin Name: placehold-it-shortcode
 Plugin URI: http://github.com/dsawardekar/placehold-it-shortcode
 Description: Shortcodes for the placehold.it image placeholder service.
-Version: 0.1
+Version: 0.2
 Author: Darshan Sawardekar
 Author URI: http://pressing-matters.io
 License: GPL2
@@ -60,11 +60,11 @@ function get_text(&$attrs) {
   return '&text=' . $text;
 }
 
-function clean_placeholder_shortcode($attrs) {
+function placeholder_it_shortcode($attrs) {
   $segments = build_segments($attrs);
   return '<img src="http://placehold.it/' . implode('/', $segments) . '">';
 }
 
-add_shortcode('placehold-it', 'clean_placeholder_shortcode');
+add_shortcode('placehold-it', 'placeholder_it_shortcode');
 
 ?>
