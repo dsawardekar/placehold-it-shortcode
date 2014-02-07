@@ -65,6 +65,6 @@ function clean_placeholder_shortcode($attrs) {
   return '<img src="http://placehold.it/' . implode('/', $segments) . '">';
 }
 
-add_shortcode('clean-placeholder', 'clean_placeholder_shortcode');
+add_shortcode('placehold-it', 'clean_placeholder_shortcode');
 
 ?>
